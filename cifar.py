@@ -59,12 +59,12 @@ plt.title('Epochs vs  Accuracy')
 #model.fit(x_train,y_train,epochs = 10,batch_size = 64)
 
 #exp:4 optimizer : adam,batch_size:64,one more layer(256 nuerons)
-model.add(Dense(256,activation='relu'))
-model.add(Dense(128,activation='relu'))
-model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
-model.fit(x_train,y_train,epochs = 10,batch_size = 64)
+#model.add(Dense(256,activation='relu'))
+#model.add(Dense(128,activation='relu'))
+#model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+#model.fit(x_train,y_train,epochs = 10,batch_size = 64)
 
 
 #exp:5 optimizer : adam,batch_size:64,epochs increase from 10 to 30
-#model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
-#model.fit(x_train,y_train,epochs = 30,batch_size = 64)
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+model.fit(x_train,y_train,epochs = 30,batch_size = 64)
