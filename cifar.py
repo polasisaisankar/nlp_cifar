@@ -49,14 +49,14 @@ plt.title('Epochs vs  Accuracy')
 #model.fit(x_train,y_train,epochs = 10,batch_size = 64)
 
 #exp:2 optimizer : sgd,batch_size:64
-model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
-model.fit(x_train,y_train,epochs = 10,batch_size = 64)
-
-#exp:3 optimizer : sgd,batch_size:64,one more layer(256 nuerons)
-#model.add(Dense(256,activation='relu'))
-#model.add(Dense(128,activation='softmax'))
 #model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
 #model.fit(x_train,y_train,epochs = 10,batch_size = 64)
+
+#exp:3 optimizer : sgd,batch_size:64,one more layer(256 nuerons)
+model.add(Dense(256,activation='relu'))
+model.add(Dense(128,activation='softmax'))
+model.compile(optimizer='sgd',loss='categorical_crossentropy',metrics=['accuracy'])
+model.fit(x_train,y_train,epochs = 10,batch_size = 64)
 
 #exp:4 optimizer : adam,batch_size:64,one more layer(256 nuerons)
 #model.add(Dense(256,activation='relu'))
